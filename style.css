@@ -200,6 +200,10 @@ body {
     }
 }
 
+.overlay {
+    display: none;
+}
+
 .menu {
     height: 120px;
     position: fixed;
@@ -208,7 +212,6 @@ body {
     transform: translate(35%, 0);
     display: flex;
     gap: 40px;
-    grid-template-columns: repeat(5, 1fr);
     place-items: center;
     color: hsl(236, 13%, 42%);
     font-weight: 400;
@@ -223,7 +226,7 @@ body {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
 
     .container {
         width: 375px;
@@ -235,7 +238,7 @@ body {
         justify-content: space-between;
 
         img {
-            margin-left: 15px;
+            margin: 0 15px;
         }
 
         .open {
@@ -325,7 +328,42 @@ body {
         }
     }
 
+    .overlay {
+        position: fixed;
+        height: 100vh;
+        width: 376px;
+        top: 0;
+        left: 50%;
+        transform: translate(-188px, 0);
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
     .menu {
+        height: 100vh;
+        width: 235px;
+        padding: 0 20px;
+        transform: translate(-68px, 0);
+        background-color: white;
+        color: black;
         display: none;
-    } 
+        z-index: 2;
+
+        .select {
+            margin: 0 auto 30px 10px;
+        }
+
+        .close {
+            display: block;
+            margin: 20px 0 50px auto;
+        }
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    .menu.active {
+        display: block;
+    }
 }
