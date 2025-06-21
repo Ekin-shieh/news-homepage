@@ -339,18 +339,36 @@ body {
         z-index: 1;
     }
 
-    .menu {
+    .menu-wrapper {
+        position: fixed;
+        width: 375px;
         height: 100vh;
-        width: 235px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100vh;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .menu {
+        position: fixed;
+        height: 100vh;
+        width: 275px;
         padding: 0 20px;
-        transform: translate(-68px, 0);
+        box-sizing: border-box;
         background-color: white;
         color: black;
-        display: none;
-        z-index: 2;
+        z-index: 3;
+        flex-direction: column;
+        left: 50%;
+        transform: translateX(188px);
+        transition: transform 0.3s ease-in-out;
+        line-height: 0.5;
 
         .select {
-            margin: 0 auto 30px 10px;
+            margin: 0 auto 0 10px;
         }
 
         .close {
@@ -364,6 +382,6 @@ body {
     }
 
     .menu.active {
-        display: block;
+        transform: translateX(-78px);
     }
 }
