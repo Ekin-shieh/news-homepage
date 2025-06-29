@@ -350,7 +350,7 @@ body {
         height: 100vh;
         top: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50vw);
         height: 100vh;
         overflow: hidden;
         pointer-events: none;
@@ -387,6 +387,6 @@ body {
     }
 
     .menu.active {
-        transform: translateX(calc(50vw-275px));
+        transform: translateX(calc(50vw - 275px));
     }
 }
