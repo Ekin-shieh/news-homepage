@@ -239,7 +239,7 @@ body {
 
     .header {
         height: 85px;
-        width: 375px;
+        width: 100vw;
         justify-content: space-between;
 
         img {
@@ -336,7 +336,7 @@ body {
     .overlay {
         position: fixed;
         height: 100vh;
-        width: 376px;
+        width: 100vw;
         top: 0;
         left: 50%;
         transform: translate(-188px, 0);
@@ -346,7 +346,7 @@ body {
 
     .menu-wrapper {
         position: fixed;
-        width: 375px;
+        width: 100vw;
         height: 100vh;
         top: 0;
         left: 50%;
@@ -368,7 +368,7 @@ body {
         z-index: 3;
         flex-direction: column;
         left: 50%;
-        transform: translateX(188px);
+        transform: translateX(50vw);
         transition: transform 0.3s ease-in-out;
         line-height: 0.5;
 
@@ -387,6 +387,6 @@ body {
     }
 
     .menu.active {
-        transform: translateX(-78px);
+        transform: translateX(calc(50vw-275px));
     }
 }
