@@ -338,8 +338,7 @@ body {
         height: 100vh;
         width: 100vw;
         top: 0;
-        left: 50%;
-        transform: translate(-188px, 0);
+        left: 0;
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 1;
     }
@@ -365,8 +364,7 @@ body {
         color: black;
         z-index: 3;
         flex-direction: column;
-        left: 50%;
-        transform: translateX(50vw);
+        left: 100%;
         transition: transform 0.3s ease-in-out;
         line-height: 0.5;
 
@@ -385,6 +383,6 @@ body {
     }
 
     .menu.active {
-        transform: translateX(calc(50vw - 275px));
+        transform: translateX(calc(-275px));
     }
 }
