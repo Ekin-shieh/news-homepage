@@ -384,5 +384,6 @@ body {
 
     .menu.active {
         transform: translateX(calc(-275px));
+        pointer-events: none;
     }
 }
